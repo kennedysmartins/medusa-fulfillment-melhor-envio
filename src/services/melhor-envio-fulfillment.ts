@@ -126,7 +126,7 @@ class MelhorEnvioFulfillmentService extends AbstractFulfillmentService {
         width: item.variant.width || item.variant.product.width || 10,
         height: item.variant.height || item.variant.product.height || 10,
         length: item.variant.length || item.variant.product.length || 10,
-        weight: item.variant.weight || item.variant.product.weight || 0.5,
+        weight: (item.variant.weight || item.variant.product.weight || 500) / 1000,
         quantity: item.quantity,
         postalCodeOrigin,
       };
